@@ -1,0 +1,620 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body{
+             height: 100vh;
+             text-align: center;
+             padding: 0.1rem;
+             background-color:white;
+        }
+        /* .header{
+            border: 1px solid black;
+        } */
+        .headerContent{
+            max-width: 1280px;
+           /* center me laane ke liye */   margin: 0 auto;      
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 1rem;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(186, 118, 186);
+            text-decoration: none;
+            gap: 0.625rem;
+        }
+        .logoIcon{
+            height: 9rem;
+            width: 5rem;
+            border-radius: 0.5rem;
+        }
+        .logoText{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .nav{
+            display: none;
+            gap: 1.5rem;
+        }
+         @media screen and (min-width:768px){ 
+            .nav{
+                display: flex;
+            }
+         } 
+        .nav-link{
+            color: rgb(138, 135, 135);
+            font-size: 1.125rem;
+            font-weight: 500;
+            transform: color 0.1s;
+        }
+        .nav-link:hover{
+            color: rgb(154, 84, 109);
+        }
+        .contact-button{
+            display: none;
+            text-decoration: none;
+            border: none;
+            border-radius: 0.375rem;
+            color: white;
+            background-color: rgb(200, 136, 188);
+            transform: all 0.1s;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        
+
+        }
+        @media screen and (min-width:768px){ 
+            .contact-button{
+                display: block;
+            }
+         }
+        .contact-button:hover{
+            background-color: rgb(83, 61, 89);
+        }
+
+         .menu-button{
+            display:none;
+            border: none;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+             background-color:white;  
+             font-weight: 600;
+             padding: 0.5rem 0.9rem;
+        } 
+         @media screen and (max-width:768px){
+            .menu-button{
+                display:block;
+            }
+        }    
+        .menu-icon{
+            height: 1.5rem ;
+            width: 1.5rem ;
+        }
+        .mainSection{
+            max-width: 1280px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0.6rem;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .contentLeft{
+            text-align: center;
+            animation: slideFromLeft 1s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideFromLeft{
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .sectionLabel{
+            font-size: 1rem ;
+            font-weight: 600;
+            color: rgb(150, 78, 184);
+        }
+        .sectionTitle{
+            font-size: 2.25rem;
+            padding: 1.1rem;
+            color: rgb(161, 121, 199);
+        }
+        .sectionDescription{
+            color: rgb(80, 66, 74);
+            font-size: 1.1rem ;
+            width: 78%;
+        }
+        .buttonGroup{
+            display: flex;
+            gap: 2rem;
+            padding: 0;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        .button1{
+            border: none;
+            border-radius: 0.375rem;
+            color: white;
+            background-color: rgb(200, 136, 188);
+            transform: all 0.1s;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+
+        }
+        .button2{
+            border: none;
+            border-radius: 0.375rem;
+            color: white;
+            background-color: rgb(142, 93, 133);
+            transform: all 0.1s;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+
+        }
+        .button1:hover{
+            background-color: rgb(83, 61, 89);
+        }
+        .button2:hover{
+            background-color: rgb(83, 61, 89);
+        }
+        .contentRight{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .imageContainer{
+            border-radius: 1.2rem;
+            overflow: hidden;
+            box-shadow: 5px 8px 12px rgb(88, 82, 82);
+            height: 50vh; 
+            /* width: 50vw;   */
+        }
+        .sectionImage{
+            height: 100%;
+            width: 100%;
+        }
+        @media screen and (min-width:768px) {
+            .mainSection{
+                flex-direction: row;
+            }
+            .contentLeft{
+                max-width: 50%;
+                text-align: left;
+            }
+            .sectionTitle{
+                padding-left: 0;
+                font-size: 4rem;
+            } 
+        }
+        .buttonGroup{
+            justify-content: start;
+        }
+        .companyContainer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 2rem;
+          animation: slideFromLeft 1s ease forwards;
+        }
+        .companyGrid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3.8rem;
+            padding: 1rem;
+            background-color: pink;
+            border: none;
+            border-radius: 0.625rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.8rem 2.5rem;
+        }
+        .companyLogo{
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            color: grey;
+        }
+        .imgLogo{
+            height: 1.56rem;
+           
+        }
+        .logoText{
+             font-size: 1rem;
+            color: grey ;   
+        }
+        @media screen and (min-width:640px){
+            .companyGrid{
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+        .companyTitle{
+            font-size: 2.3rem;
+            font-weight: bold;
+        }
+
+        .featureContainer{
+            background-color: rgb(190, 186, 186);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        .featureContent{
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+              
+        }
+        .mainTitle{
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        .mainInfo{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+       .mainDescription{
+        color: rgb(45, 42, 42);
+        font-size: 1rem;
+       }
+       .featureGrid{
+             display: grid;
+             grid-gap: 2rem;
+             grid-template-columns: repeat(2,1fr);
+             margin-top: 1rem;
+
+       }
+       .iconContainer{
+        background-color: white;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .featureImg{
+        width: 1.5rem;
+        height: 2rem;
+       }
+       .featureCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.6rem;
+        border-radius: 1rem;
+        gap: 1rem;
+       }
+       .featureInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: white;
+       }
+       .featureCard:nth-child(1){
+        background-color: #4a90e2;
+       }
+
+       .featureCard:nth-child(2){
+        background-color: #FF6289;
+       }
+       .featureCard:nth-child(3){
+        background-color: #fcbf58;
+       }
+       .featureCard:nth-child(4){
+        background-color: #44bfc3;
+       }
+       .featureCard:nth-child(5){
+        background-color: #77b05d;
+       }
+       .featureCard:nth-child(6){
+        background-color: #7d78b1;
+       }
+       .featureTitle{
+        font-weight: bold;
+        font-size :1.3rem;
+       }
+        
+@media screen  and (max-width:768px) {
+    .featureGrid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.testimonialContainer{
+    background-color: white;
+    padding:2rem;
+    margin: 0 auto;
+    max-width: 940px;
+    margin-top:1rem;
+}
+.testmonialContent{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 2rem;
+   
+}
+.testimonialTitle{
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.testimonialGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+    grid-gap: 2rem;
+
+}
+.testimonialName{
+    font-size: 1rem;
+    color: #7d78b1;
+}
+.testimonialDesc{
+  font-size: 0.875rem;
+  color: grey;
+}
+
+.testimonialCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(124, 121, 121);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5) ;
+    padding: 1rem;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonialCard:hover{
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0,0,0,1) ;
+    border: 1px solid rgb(125, 125, 139);
+}
+.testimonialAvatar img{
+    height: 5rem;
+    width: 5rem;
+
+}
+.testimonialText{
+    font-size: 0.8rem;
+    color: rgb(90, 86, 86);
+}
+.newsletterContainer{
+    background-color: white;
+    max-width: 940px;
+    height: 40vh;
+    margin: 0 auto;
+}
+.newsletterContent{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(226, 219, 219);
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.newsLeft{
+    width: 50%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+.newsleftImg{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    inset: 0;
+}
+.newsRight{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 98%;
+}
+.newsTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(148, 65, 143);
+}
+.newsInfo{
+    padding:0 3rem;
+
+}
+.newsDescription{
+    text-align: left;
+    color: grey;
+}
+.newsForm{
+    padding: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+}
+.newsEmail{
+    background-color: #fff;
+    /* width: 100%; */
+    color: #333;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+.newsEmail:focus{
+    border-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.newssendButton{
+    background-color:  rgb(148, 65, 143);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+.newssendButton:hover{
+    background-color: rgb(204, 103, 170);
+}
+.privacyPolicy{
+    font-size: 0.76rem ;
+    padding: 0 3rem;
+    color: grey;
+}
+.newsLink{
+    text-decoration: underline;
+    color: #2563eb;
+}
+@media screen and (min-width:640px) {
+    .newsLeft{
+        display: block;
+        width:50% ;
+    }
+    .newsRight{
+        width: 50%;
+    }
+    .newsletterContainer{
+    padding: 2rem;
+    }
+}
+@media screen and (min-width:640px){
+.newsTitle{
+    font-size: 1.5rem;
+}
+}
+.footerContainer{
+    background-color: white;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 940px;
+}
+.footer{
+    max-width: 940px;
+    padding: 1.2 2.4rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 2rem;
+
+}
+.footerTop{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.logo-svg{
+   width: 3rem;
+    height: 5rem;
+}
+.socialIcon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.social{
+    display: flex;
+    gap:0.6rem;
+}
+.logoLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:rgb(148, 65, 143) ;
+   
+}
+.companyLogo{
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: -0.5rem;
+}
+.fillerText{
+    color: grey;
+    font-size: 1rem;
+}
+.footerGrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:3rem ;
+    padding: 0.1rem;
+    padding-left: 6.25rem;
+    width: 58%;
+    padding-top: 1.8rem;
+}
+.footergridHeading{
+    font: 1rem;
+    font-weight: bold;
+    color: rgb(44, 43, 43);
+}
+.footerLink{
+    color: grey;
+    font-size: 0.9rem;
+}
+ul{
+    list-style-type: none;
+}
+.footerlinksList{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.footergridColumn{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footerCopyright{
+    color: grey;
+    font-size: 0.9rem;
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    border-top:1px solid rgb(184, 180, 180) ;
+    padding-top:1rem ;
+}
+@media  screen and (max-width:1080px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerTop{
+        padding-left: 7rem;
+    }
+    .footerGrid{
+        align-self: center;
+        justify-content: space-evenly;
+    }
+}
+@media  screen and (max-width:850px) {
+    .footerGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footerTop{
+        padding-left: 2rem;
+    }
+}
