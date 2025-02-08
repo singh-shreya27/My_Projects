@@ -58,3 +58,6 @@ window.requestAnimationFrame(main); // 1.
 
 //If you use `setTimeout(fn, 16)`, it might not sync perfectly with the screen refresh, leading to **inconsistent frame pacing** and stutters.  
 
+//5.
+//How can we decrease/control FPS?
+
